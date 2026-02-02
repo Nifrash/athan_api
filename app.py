@@ -17,6 +17,7 @@ def home():
 @app.route("/api/data", methods=["GET"])
 def get_all_data():
     df['fajr'] = df['fajr'].astype(str)
+    df['shuruq'] = df['shuruq'].astype(str)
     df['dhuhr'] = df['dhuhr'].astype(str)
     df['asr'] = df['asr'].astype(str)
     df['maghrib'] = df['maghrib'].astype(str)
@@ -29,6 +30,7 @@ def prayer_by_city(city):
 
     df = load_data()
     df['fajr'] = df['fajr'].astype(str)
+    df['shuruq'] = df['shuruq'].astype(str)
     df['dhuhr'] = df['dhuhr'].astype(str)
     df['asr'] = df['asr'].astype(str)
     df['maghrib'] = df['maghrib'].astype(str)
@@ -45,6 +47,7 @@ def prayer_by_city(city):
 def prayer_by_city_date(city, date):
     df = load_data()
     df['fajr'] = df['fajr'].astype(str)
+    df['shuruq'] = df['shuruq'].astype(str)
     df['dhuhr'] = df['dhuhr'].astype(str)
     df['asr'] = df['asr'].astype(str)
     df['maghrib'] = df['maghrib'].astype(str)
